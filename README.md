@@ -2,6 +2,9 @@
 
 English (Google TR) | [中文](./README.md)
 
+Fork of [D7z-Project](https://github.com/d7z-project/caddy-gitea-pages)
+
+
 > Gitea Pages implemented with reference to Github Pages.
 
 ## Installation Instructions
@@ -9,7 +12,7 @@ English (Google TR) | [中文](./README.md)
 `xcaddy` utility is required to generate the Caddy executable with the following command
 
 ```bash
-xcaddy build --with github.com/d7z-project/caddy-gitea-pages
+xcaddy build --with github.com/mohmadhabib/caddy-gitea-pages
 # List the current modules
 . /caddy list-modules | grep gitea
 ```
@@ -17,7 +20,7 @@ xcaddy build --with github.com/d7z-project/caddy-gitea-pages
 We also provides `linux/amd64` and `linux/arm64` images:
 
 ```bash
-docker pull ghcr.io/d7z-project/caddy-gitea-pages:nightly
+docker pull ghcr.io/mohmadhabib/caddy-gitea-pages:nightly
 ```
 
 ## Configuration Notes
@@ -32,11 +35,11 @@ After installing Caddy, write the following configuration in `Caddyfile`.
 :80
 gitea {
    # Gitea server address
-   server https://gitea.com
+   server https://yourGiteaInstanceURL.com
    # Gitea Token
    token please-replace-it
    # Default domain, similar to Github's github.io
-   domain example.com
+   domain pages.example.com
 }
 
 ```
